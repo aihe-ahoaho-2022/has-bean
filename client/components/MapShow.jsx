@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 // import ReactMapGL from 'react-map-gl'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import Map, { Marker } from 'react-map-gl'
 
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css'
 
-export default function MapShow({ coOrds, moreInfo, viewInfo }) {
-  const roasters = coOrds.roasters
+export default function MapShow({ coOrds, roasters, moreInfo, viewInfo }) {
+  // const roasters = coOrds.roasters
+
   return (
     <div id="map">
       <Map

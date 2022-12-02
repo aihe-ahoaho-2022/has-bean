@@ -5,10 +5,13 @@ import { ReactSearchAutocomplete } from "react-search-autocomplete";
 
 export default function Search() {
   const searchRoasters = useSelector((state) => state.searchRoasters)
-  // const roasters = useSelector((state) => state.roasters)
+  const roasters = useSelector((state) => state.roasters)
   // const cafes = useSelector((state) => state.cafes)
 
-  console.log('searchRoaster in Search.jsx', searchRoasters);
+  // console.log('searchRoaster in Search.jsx', searchRoasters);
+
+  const concatArray = searchRoasters.concat(roasters)
+  console.log(concatArray,'concatArray');
 
   const handleOnSearch = (string, results) => {
     console.log(string, results);
@@ -19,7 +22,7 @@ export default function Search() {
   };
 
   const handleOnSelect = (item) => {
-    console.log(item);
+    console.log(item , 'on select');
   };
 
   const handleOnFocus = () => {

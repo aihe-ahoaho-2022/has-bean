@@ -10,12 +10,15 @@ import SearchResult from './SearchResult'
 
 export default function Home() {
   const dispatch = useDispatch()
+  const searchRoasters = useSelector((state) => state.searchRoasters)
 
   useEffect(() => {
     dispatch(fetchRoasters())
     dispatch(fetchCafes())
     dispatch(fetchSearchRoasters())
   }, [])
+
+
   const [coOrds, setCoOrds] = useState({
     lng: '45.827483279857349',
     lat: '-45.827483279857349',
@@ -56,13 +59,18 @@ export default function Home() {
         city: 'Tūrangi',
         roaster_id: 1,
       },
-    ],
+    ]
   })
+
+  const [viewDetail, setViewDetail] = useState({})
+
   // Function for onClick for markers on map
   function moreInfo(id) {
+    setViewDetail
     console.log('New Cords ', id)
   }
  
+
 
   const [viewInfo, setViewInfo] = useState()
   useEffect(() => {
@@ -99,11 +107,11 @@ export default function Home() {
     <>
       <div>
 
-        <Search />
+        <Search setCoOrds={setCoOrds}/>
       </div>
       <div>
         {viewInfo && (
-          <MapShow coOrds={coOrds} moreInfo={moreInfo} viewInfo={viewInfo} />
+          <MapShow coOrds={coOrds} roasters={searchRoasters} moreInfo={moreInfo} viewInfo={viewInfo} />
         )}
       </div>
     </>
