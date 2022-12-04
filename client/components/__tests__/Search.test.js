@@ -47,7 +47,7 @@ const fakeStore = {
 }
 
 describe('<Search />', () => {
-  it.skip('displays label text Search on page', () => {
+  it('displays label text Search on page', () => {
     expect.assertions(1)
     render(
       <Provider store={fakeStore}>
@@ -62,7 +62,7 @@ describe('<Search />', () => {
     expect(textOnPage).toBeTruthy()
   })
 
-  it.skip('displays placeholder text.', () => {
+  it('displays placeholder text.', () => {
     expect.assertions(1)
     render(
       <Provider store={fakeStore}>
