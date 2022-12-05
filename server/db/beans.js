@@ -14,6 +14,8 @@ function getBeans(db = connection) {
       'beans.process as process',
       'beans.roast_degree as roast_degree',
       'beans.flavour_profile as flavour_profile',
+      // Might it be good for consistency to rename these
+      // two to roastDegree and flavourProfile?
       'roasters.name as roasterName'
     )
 }

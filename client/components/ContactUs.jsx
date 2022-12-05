@@ -21,6 +21,9 @@ export default function ContactUs() {
     <input placeholder='Your phone number'></input><p></p>
     <textarea placeholder='Your message'></textarea><p></p>
     <button>Send message</button>
+    {/* I see that this form is very sketched in, but it will need
+    accessible labels, and the vertical spacing should be done
+    with CSS, rathe than empty paragraph elements. */}
     </>
   )
 }

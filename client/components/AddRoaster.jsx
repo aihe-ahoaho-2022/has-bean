@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { submitRoaster } from '../actions/roasters'
 import styles from './AddRoaster.module.scss'
+// Please run the linter and resolve any errors
 
 export default function AddRoaster() {
   const dispatch = useDispatch()

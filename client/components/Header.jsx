@@ -39,6 +39,9 @@ export default function Header() {
               <Link to='/' onClick={handleLogOff}>
                 Sign out
               </Link>
+              {/* Technically, both this Link and the one below should be Buttons,
+              then you wouldn't have to preventDefault
+              https://a11y-101.com/design/button-vs-link */}
         </IfAuthenticated>
 
         <IfNotAuthenticated>

@@ -13,6 +13,11 @@ export default function Search() {
   const cities = new Set()
   cafes.map((cafe) => cities.add(cafe.city))
   const citiesArr = Array.from(cities)
+  // The three lines above are a bit odd. It seems like you don't need
+  // the Set, only the Array? And cities.map without assigning the
+  // result to a const is relying only on side effects and would be
+  // better as a forEach. Cleaner would be:
+  // const citiesArr = cafes.map(cafe => cafe.city)
 
   const handleOnSelect = (item) => {
     dispatch(setSearchResult(item))

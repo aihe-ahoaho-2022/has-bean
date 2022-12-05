@@ -18,6 +18,9 @@ function getCafes(db = connection) {
       'cafes.id as id',
       'cafes.lat as lat',
       'cafes.lng as lng'
+      // I think if you're not renaming the field and there won't
+      // be a collision, you don't need the "as [something]" part
+      // Only need that if renaming.
     )
 }
 

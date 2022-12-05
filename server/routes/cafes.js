@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
     })
     .catch((err) => {
       console.error(err.message)
-      res.sendStatus(500)
+      res.sendStatus(500) // Can we add the nice user-friendly message like in roaster.js?
     })
 })
 

@@ -28,7 +28,7 @@ export default function AddCafe() {
   function handleSubmit(event) {
     event.preventDefault()
     dispatch(addMoreCafe(newCafe))
-    dispatch(fetchCafes())
+    dispatch(fetchCafes()) // This shouldn't be necessary. Any component that consumes the cafes portion of state should be notified by the store that there's been an update.
     setNewCafe('')
     navigate('/')
   }
