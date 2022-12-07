@@ -7,7 +7,7 @@
   gap: 8px; 
   padding: 0.4rem 0.4rem;
   // padding: 1rem 1rem 24px; 
-  background-color: theme.$bright;
+  // background-color: theme.$bright;
   color: theme.$black;
   font-family: theme.$font-header;
   font-size: 1.2rem; 
@@ -15,6 +15,7 @@
   white-space: nowrap;  
   margin-right: 3rem;
   margin-left: 3rem;
+  text-shadow: 0px 0px 10px #d3d3d3;
 }
 
 .title { 
@@ -63,4 +64,14 @@
   transform: translateY(-3px); 
   transition-duration: 500ms;
   text-shadow: 5px 5px rgb(110, 110, 110);
+}
+
+.christmas {
+  position: absolute;
+  background-image: url("../../server/public/img/christmas\ baubles.png");
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat-x;
+  opacity: 40%;
+  z-index: -1;
 }

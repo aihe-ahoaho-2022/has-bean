@@ -22,6 +22,7 @@ export default function Header() {
 
   return (
     <>
+    <div className={styles.christmas}></div>
       <nav className={styles.navbar}>
         <div className={styles.logo}>
           <Link to="/">
