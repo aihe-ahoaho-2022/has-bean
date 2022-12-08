@@ -9,8 +9,8 @@ router.get('/', (req, res) => {
       res.json(result)
     })
     .catch((err) => {
-      console.error(err.message)
-      res.sendStatus(500).json({ message: 'Something went wrong' })
+      console.error(err)
+      res.status(500).json({ message: 'Something went wrong' })
     })
 })
 
@@ -24,8 +24,8 @@ router.post('/', (req, res) => {
       res.json(cafes)
     })
     .catch((err) => {
-      console.error(err.message)
-      res.sendStatus(500).json({ message: 'Something went wrong' })
+      console.error(err)
+      res.status(500).json({ message: 'Something went wrong' })
     })
 })
 module.exports = router

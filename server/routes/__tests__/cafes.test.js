@@ -36,12 +36,14 @@ describe('GET /api/v1/cafes', () => {
       })
   })
   it('should return status 500 and an error message when database fails.', () => {
-    getCafes.mockImplementation(() => Promise.reject(new Error('No cafe')))
+    expect.assertions(3)
+    getCafes.mockImplementation(() => Promise.reject('No cafe'))
     return request(server)
-      .get('/api/v1/cafes/')
+      .get('/api/v1/cafes')
       .then((res) => {
         expect(res.status).toBe(500)
         expect(console.error).toHaveBeenCalledWith('No cafe')
+        expect(res.text).toContain('Something went wrong')
       })
   })
 })
